@@ -5,12 +5,6 @@ implement it using a program to find list of elements which are common to both. 
 Complexity = O(m+n))
 */
 #include<bits/stdc++.h>
-#define ll long long
-#define vi vector<int>
-#define vii vector<vecto<int>>
-#define N 10000
-#define mod 1000000007
-#define rep(i,a,b) for(int i=a;i<b;i++)
 using namespace std;
 
 void solve(){
@@ -26,6 +20,8 @@ void solve(){
     for(int i=0;i<m;i++){
         cin >> a2[i];
     }
+    sort(a1, a1 + n);
+    sort(a2, a2 + m);
 
     int i=0,j=0;
     while(i<n && j<m){
@@ -44,10 +40,6 @@ void solve(){
 }
 
 int main(){
-    int t;
-    cin >> t;
-    while(t--){
-        solve();
-    }
+    solve();
     return 0;
 }

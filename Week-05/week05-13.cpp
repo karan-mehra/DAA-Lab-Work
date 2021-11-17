@@ -5,12 +5,6 @@ implement it using a program to find which alphabet has maximum number of occurr
 print it. (Time Complexity = O(n))
 */
 #include<bits/stdc++.h>
-#define ll long long
-#define vi vector<int>
-#define vii vector<vecto<int>>
-#define N 10000
-#define mod 1000000007
-#define rep(i,a,b) for(int i=a;i<b;i++)
 using namespace std;
 
 void solve(){

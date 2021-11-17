@@ -4,51 +4,56 @@
 Given a sorted array of positive integers, design an algorithm and implement it using a program
 to find three indices i, j, k such that arr[i] + arr[j] = arr[k].
 */
-#include<bits/stdc++.h>
-#define ll long long
-#define Vi vector<int>
-#define mod 1000000007
-#define rep(i,a,b) for(int i=a;i<b;i++)
+
+#include <bits/stdc++.h>
+#define pii pair<int, int>
+
 using namespace std;
-int binarySearch(int *a,int n,int key){
-    int start=0;
-    int end=n-1;
-    int comp=0;
-    while(start<=end){
-        comp++;
-        int mid=start + (end-start)/2;
-        if(a[mid]==key){
-            return mid; 
+
+pii two_pointers(vector<int> a, int n) {
+    int i = 1, j = n - 1;
+    while(i < j) {
+        if(a[i] + a[j] == a[n]) {
+            return {i, j};
+        }else if(a[i] + a[j] < a[n]) {
+            i++;
+        }else {
+            j--;
         }
-        else if(a[mid]>key){
-            end=mid-1;
-        }
-        else start=mid+1;
     }
-    return 0;
+    return {-1, -1};
 }
-void solve(){
-    int n;
-    cin >> n;
-    int *a=new int[n];
-    for(int i=0;i<n;i++){
-        cin >> a[i];
-    }
-    for(int i=0;i<n;i++){
-        for(int j=i+1;j<n;j++){
-            if(int k=binarySearch(a,n,a[i]+a[j])){
-                cout << i<<", "<<j<<", "<<k<<endl;
-                return;
-            }
-        }
-    }
-    cout << "No sequence found"<<endl;
-}
-int main(){
+
+int main() {
     int t;
     cin >> t;
-    while(t--){
-        solve();
+    while (t--) {
+        int n;
+        cin >> n;
+        n++;
+        vector<int> a(n);
+        for(int i = 1; i < n; i++) {
+            cin >> a[i];
+        }
+        int f = -1;
+        int s = -1;
+        int k = -1;
+
+        for(int i = 3; i < n; i++) {
+            pii p = two_pointers(a, i);
+            if(p.first != -1 && p.second != -1) {
+                f = p.first;
+                s = p.second;
+                k = i;
+                break;
+            }
+        }
+
+        if (k != -1) {
+            cout << f << ", " << s << ", " << k << endl;
+        }
+        else
+            cout << "No sequence found." << endl;
     }
     return 0;
 }

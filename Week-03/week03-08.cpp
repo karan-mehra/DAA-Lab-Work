@@ -5,10 +5,6 @@ array using selection sort. Your program should also find number of comparisons 
 swaps required.
 */
 #include<bits/stdc++.h>
-#define ll long long
-#define Vi vector<int>
-#define mod 1000000007
-#define rep(i,a,b) for(int i=a;i<b;i++)
 using namespace std;
 void swap(int *a,int i,int j,int& swaps){
     swaps++;

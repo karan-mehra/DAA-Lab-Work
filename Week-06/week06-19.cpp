@@ -55,4 +55,4 @@ int main() {
         cout << "No Cycle Exists" << endl;
     }
     return 0;
-}0
+}

@@ -6,12 +6,6 @@ after sorting each one of them. Your program should also find number of comparis
 inversions during sorting the array.
 */
 #include<bits/stdc++.h>
-#define ll long long
-#define vi vector<int>
-#define vii vector<vecto<int>>
-#define N 10000
-#define mod 1000000007
-#define rep(i,a,b) for(int i=a;i<b;i++)
 using namespace std;
 
 void merge(int *a,int l,int mid,int h,int& comp,int& inversion){
@@ -70,7 +64,7 @@ void solve(){
     for(int i=0;i<n;i++){
         cout << a[i]<<" ";
     }
-    cout << endl<< comp <<" "<<inversion;
+    cout << endl<< comp <<" "<<inversion << endl;
 }
 
 int main(){

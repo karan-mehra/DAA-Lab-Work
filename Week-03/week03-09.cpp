@@ -5,12 +5,6 @@ program to find whether there are any duplicate elements in the array or not. (u
 Complexity = O(n log n))
 */
 #include<bits/stdc++.h>
-#define ll long long
-#define vi vector<int>
-#define vii vector<vecto<int>>
-#define N 10000
-#define mod 1000000007
-#define rep(i,a,b) for(int i=a;i<b;i++)
 using namespace std;
 
 void swap(int *a,int i,int j){

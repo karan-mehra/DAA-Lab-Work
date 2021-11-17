@@ -4,12 +4,6 @@ Given an unsorted array of integers, design an algorithm and implement it using 
 find Kth smallest or largest element in the array. (Worst case Time Complexity = O(n))
 */
 #include<bits/stdc++.h>
-#define ll long long
-#define vi vector<int>
-#define vii vector<vecto<int>>
-#define N 10000
-#define mod 1000000007
-#define rep(i,a,b) for(int i=a;i<b;i++)
 using namespace std;
 
 int solve(){
